@@ -20,13 +20,24 @@
     "debug": "~2.6.9",
     "express": "~4.16.0",
     "http-errors": "~1.6.2",
+    "ip": "^1.1.5",
     "laravel-mix": "^2.0",
     "lodash": "^4.17.4",
     "morgan": "~1.9.0",
     "node-sass": "^4.9.2",
     "pug": "2.0.0-beta11",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "sass-loader": "^7.0.3"
+    "query-string": "^6.1.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-scripts": "1.1.4",
+    "react-youtube": "^7.6.0",
+    "sass-loader": "^7.0.3",
+    "socket.io": "^2.1.1",
+    "socket.io-client": "^2.1.1",
+    "url-parse": "^1.4.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.24.6",
+    "browser-sync-webpack-plugin": "2.0.1"
   }
 }
