@@ -1,5 +1,4 @@
 let mix = require('laravel-mix');
-
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -13,3 +12,5 @@ let mix = require('laravel-mix');
 mix.setPublicPath('public');
 mix.react('frontend/js/app.js', 'public')
    .sass('frontend/sass/app.scss', 'public');
+mix.browserSync('http://127.0.0.1:3000/');
+
