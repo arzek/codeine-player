@@ -21,7 +21,7 @@ io.on('connection', function(socket){
     params: {
       part: 'snippet',
       id: msg.id,
-      key: 'AIzaSyAFHTSwmLHZDcEZ4ZOhptenWC-7R6_BKJw'
+      key: process.env.G_KEY
     }
   })
   .then(function (response) {
