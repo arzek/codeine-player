@@ -11,9 +11,29 @@ var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 
+var axios = require('axios');
+
 io.on('connection', function(socket){
   socket.on('add', function(msg){
-    io.emit('add', msg);
+
+    
+  axios.get('https://www.googleapis.com/youtube/v3/videos', {
+    params: {
+      part: 'snippet',
+      id: msg.id,
+      key: 'AIzaSyAFHTSwmLHZDcEZ4ZOhptenWC-7R6_BKJw'
+    }
+  })
+  .then(function (response) {
+    io.emit('add', {
+      name: response.data.items[0].snippet.title,
+      id: msg.id,
+      img: response.data.items[0].snippet.thumbnails.default.url
+    });
+  });
+
+
+    
   });
   socket.on('remove', function(msg){
     io.emit('remove', msg);

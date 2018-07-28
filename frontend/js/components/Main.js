@@ -52,8 +52,7 @@ export default class Main extends Component {
     });
 
     socket.emit('add', {
-      id: parsed.v,
-      ip: ip.address()
+      id: parsed.v
     });
    
   }
@@ -100,7 +99,10 @@ export default class Main extends Component {
 
     let itemsList = this.state.items.map(item => {
       return (
-        <li key={'list_' + item.id}>{ip.address()}: {item.id}</li>
+        <li key={'list_' + item.id}>
+          <img src={item.img}/>
+          <strong>{item.name}</strong>
+        </li>
       )
     })
     

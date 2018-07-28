@@ -7054,8 +7054,7 @@ var Main = function (_Component) {
       });
 
       socket.emit('add', {
-        id: parsed.v,
-        ip: __WEBPACK_IMPORTED_MODULE_6_ip___default.a.address()
+        id: parsed.v
       });
     }
   }, {
@@ -7109,9 +7108,12 @@ var Main = function (_Component) {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'li',
           { key: 'list_' + item.id },
-          __WEBPACK_IMPORTED_MODULE_6_ip___default.a.address(),
-          ': ',
-          item.id
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: item.img }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'strong',
+            null,
+            item.name
+          )
         );
       });
 
